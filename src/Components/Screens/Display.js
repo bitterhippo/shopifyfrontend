@@ -6,6 +6,8 @@ import SearchBar from '../SearchBar/SearchBar';
 import SelectedBar from '../SelectedList/SelectedList';
 //PPCS
 import Card from '../PPC/Card'; 
+//API
+import API from '../../API/API';
 
 const Display = props => {
   //State Managment 
@@ -15,11 +17,12 @@ const Display = props => {
 
   return (
     <Card>
-      <div style={styles.boxWrapper}>
         <SearchBar
           onChangeHandler={setSearchBarValue}
         />
-      </div>
+        <button 
+          onClick={() => API.GetOneByTitle(searchBarValue)}
+        />
       <div style={styles.dualBoxWrapper}>
         <List />
         <SelectedBar />
