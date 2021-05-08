@@ -1,34 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-//Components
-import List from './Components/List/List';
-import SearchBar from './Components/SearchBar/SearchBar';
-import SelectedBar from './Components/SelectedList/SelectedList';
-//PPCS
-import Card from './Components/PPC/Card'
-
+//Screens
+import Display from './Components/Screens/Display';
 
 function App() {
   return (
-    <Card>
-      <div style={styles.boxWrapper}>
-        <SearchBar />
-      </div>
-      <div style={styles.dualBoxWrapper}>
-        <List />
-        <SelectedBar />
-      </div>
-    </Card>
+    <div>
+      <Display />
+    </div>
   );
 }
 
 export default App;
-
-const styles = {
-  boxWrapper: {
-    width: '100%'
-  },
-  dualBoxWrapper: {
-    width: '50%'
-  }
-}
