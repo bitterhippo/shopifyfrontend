@@ -2,7 +2,7 @@ const key = '537af063'
 
 export default {
 
-  async GetOneByTitle(title) {
+  async GetOneByTitle(title, callback) {
 
     let API = `http://www.omdbapi.com/?t=${title}&apikey=${key}`
 
@@ -12,7 +12,8 @@ export default {
 
     let request = fetch(API, requestOptions)
       .then(response => response.text())
-      .then(response => console.log(response))
+      .then(response => JSON.parse(response))
+      .then(response => callback(response))
       .catch((err) => console.log(err))
 
     return request;

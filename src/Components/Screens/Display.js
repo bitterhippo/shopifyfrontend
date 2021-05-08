@@ -5,26 +5,30 @@ import List from '../List/List';
 import SearchBar from '../SearchBar/SearchBar';
 import SelectedBar from '../SelectedList/SelectedList';
 //PPCS
-import Card from '../PPC/Card'; 
+import Card from '../PPC/Card';
 //API
 import API from '../../API/API';
 
 const Display = props => {
   //State Managment 
   const [searchBarValue, setSearchBarValue] = useState('');
+  const [searchedValue, setSearchedValue] = useState('');
 
-  console.log(searchBarValue)
+  console.log(searchBarValue);
+  console.log(searchedValue);
 
   return (
     <Card>
-        <SearchBar
-          onChangeHandler={setSearchBarValue}
-        />
-        <button 
-          onClick={() => API.GetOneByTitle(searchBarValue)}
-        />
+      <SearchBar
+        onChangeHandler={setSearchBarValue}
+      />
+      <button
+        onClick={() => API.GetOneByTitle(searchBarValue, setSearchedValue)}
+      />
       <div style={styles.dualBoxWrapper}>
-        <List />
+        <List
+          searchData={searchedValue}
+        />
         <SelectedBar />
       </div>
     </Card>

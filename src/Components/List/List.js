@@ -1,20 +1,21 @@
 import React from 'react';
 
 //Subcomponents
-import ListItems from './ListItems';
+import ListItem from './ListItem';
 
-const List = props => {
+const List = ({ searchData }) => {
   return (
     <React.Fragment>
       {
-        ListItems !== undefined ? 'list data' : 'no data to list'
+        searchData !== '' 
+        ? <ListItem 
+          title={searchData.Title}
+          date={searchData.Year}
+        />
+        : 'no data to list'
       }
     </React.Fragment>
   )
 };
 
 export default List;
-
-const styles = {
-
-};
