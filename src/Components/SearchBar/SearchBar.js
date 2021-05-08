@@ -13,9 +13,4 @@ const SearchBar = props => {
 export default SearchBar;
 
 const styles = {
-  input: {
-    width: "100%",
-    height: "33%",
-    backgroundColor: 'red'
-  }
 };
