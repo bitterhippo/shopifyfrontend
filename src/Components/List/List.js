@@ -1,10 +1,15 @@
 import React from 'react';
 
+//Subcomponents
+import ListItems from './ListItems';
+
 const List = props => {
   return (
-    <div>
-      <textarea></textarea>
-    </div>
+    <React.Fragment>
+      {
+        ListItems !== undefined ? 'list data' : 'no data to list'
+      }
+    </React.Fragment>
   )
 };
 

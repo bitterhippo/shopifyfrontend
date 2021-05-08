@@ -2,14 +2,20 @@ import React from 'react';
 
 const SearchBar = props => {
   return (
-    <div>
-      <textarea></textarea>
-    </div>
+    <React.Fragment>
+      <input 
+        style={styles.input}
+      />
+    </React.Fragment>
   )
 };
 
 export default SearchBar;
 
 const styles = {
-
+  input: {
+    width: "100%",
+    height: "33%",
+    backgroundColor: 'red'
+  }
 };
