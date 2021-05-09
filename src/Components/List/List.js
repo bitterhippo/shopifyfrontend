@@ -3,17 +3,22 @@ import React from 'react';
 //Subcomponents
 import ListItem from './ListItem';
 
-const List = ({ searchData }) => {
+const List = props => {
+
+  console.log(props)
+
+  const { title, year, onNomination } = props.searchData;
 
   return (
     <div style={styles.list}>
       {
-        searchData !== ''
+        props.searchData !== ''
           ? <ListItem
-            title={searchData.Title}
-            date={searchData.Year}
+            title={props.searchData.Title}
+            year={props.searchData.Year}
+            nominationHandler={onNomination}
           />
-          : 'no data to list'
+          : 'Use the search feature to find titles.'
       }
     </div>
   )

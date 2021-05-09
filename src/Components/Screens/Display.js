@@ -10,9 +10,11 @@ import Card from '../PPC/Card';
 import API from '../../API/API';
 
 const Display = props => {
+
   //State Managment 
   const [searchBarValue, setSearchBarValue] = useState('');
   const [searchedValue, setSearchedValue] = useState('');
+  const [nominated, setNominated] = useState([]);
 
   console.log(searchedValue)
 
@@ -28,6 +30,7 @@ const Display = props => {
       <div style={styles.dualBoxWrapper}>
         <List
           searchData={searchedValue}
+          onNomination={setNominated}
         />
         <SelectedBar />
       </div>

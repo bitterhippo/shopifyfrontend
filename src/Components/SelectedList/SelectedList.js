@@ -3,7 +3,7 @@ import React from 'react';
 const SelectedList = props => {
   return (
     <div style={styles.box}>
-      Wow this should be working
+      You haven't nominated any titles yet.
     </div>
   )
 };
