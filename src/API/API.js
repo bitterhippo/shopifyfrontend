@@ -1,6 +1,6 @@
 const key = '537af063'
 
-export default {
+const API = {
 
   async GetOneByTitle(title, callback) {
 
@@ -21,3 +21,4 @@ export default {
 
 }
 
+export default API;

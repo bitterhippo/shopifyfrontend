@@ -47,13 +47,16 @@ export default Display;
 
 const styles = {
   boxWrapper: {
-    width: '100%'
+    maxWidth: '80',
+    marginLeft: 300,
+    marginRight: 300
   },
   dualBoxWrapper: {
+    width: '100%',
     display: 'flex',
     flexDirection: 'row',
-    marginTop: 15
-  },
-  button: {
+    marginTop: 15,
+    justifyContent: 'center',
+    gap: 25
   }
 }

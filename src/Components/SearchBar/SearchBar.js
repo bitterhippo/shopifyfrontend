@@ -7,7 +7,7 @@ import Card from '../PPC/Card';
 const SearchBar = ({ onChangeHandler, buttonValue, buttonHandler }) => {
   return (
     <Card>
-      <h3 style={{textAlign: 'center'}}> Enter the name of title you would like to nominate.</h3>
+      <h3> Enter the name of title you would like to nominate.</h3>
       <div style={styles.wrapper}>
         <input
           style={styles.input}
