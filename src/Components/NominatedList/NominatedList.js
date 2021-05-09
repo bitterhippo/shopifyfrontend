@@ -15,6 +15,7 @@ const NominatedList = ({ listData, onClickHandler }) => {
 
   return (
     <Card>
+      <h3 style={{textDecoration: 'underline'}}>Nominated</h3>
       <div style={styles.list}>
         {listData.length > 0
           ? listData.map((currentFilm, key) =>
@@ -34,7 +35,7 @@ const NominatedList = ({ listData, onClickHandler }) => {
 const styles = {
   list: {
     width: '45vw',
-    minHeight: '25vh'
+    minHeight: '40vh'
   }
 }
 

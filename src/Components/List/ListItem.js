@@ -4,7 +4,7 @@ const ListItem = ({ title, year, onClickHandler }) => {
 
   return (
     <div style={styles.listItem}>
-      <h3>{title} ({year})</h3>
+      <h4 style={{marginLeft: 10}}>{title} ({year})</h4>
       <button
         style={styles.button}
         onClick={() => onClickHandler(prevState =>

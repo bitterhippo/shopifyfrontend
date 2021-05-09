@@ -4,7 +4,7 @@ const NominatedListItem = ({ title, year, onClickDeleteHandler}) => {
 
   return (
     <div style={styles.item}> 
-      <h3>{title} ({year})</h3>
+      <h4 style={{marginLeft: 10}}>{title} ({year})</h4>
       <button
       style={styles.button}
        onClick={() => onClickDeleteHandler(title)}

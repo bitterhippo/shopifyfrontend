@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import List from '../List/List';
 import SearchBar from '../SearchBar/SearchBar';
 import NominatedList from '../NominatedList/NominatedList';
+//PPCS
+import Card from '../PPC/Card';
 
 const Display = props => {
 
@@ -16,6 +18,14 @@ const Display = props => {
   useEffect(() => {
     setSearchBarValue('')
   }, [searchedValue])
+
+  const Banner = () => {
+    return (
+      <Card>
+        <h3>You have reached the maximum amount of nominations!</h3>
+      </Card>
+    )
+  };
 
   return (
     <>
@@ -35,6 +45,7 @@ const Display = props => {
           onClickHandler={setNominated}
         />
       </div>
+      {nominated.length === 5 && Banner()}
     </>
   );
 }

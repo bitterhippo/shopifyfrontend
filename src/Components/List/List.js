@@ -13,6 +13,7 @@ const List = props => {
   return (
     <Card>
       <div style={styles.list}>
+        <h3 style={{textDecoration: 'underline'}}>Results</h3>
         {
           props.listData !== ''
             ? <ListItem
@@ -31,7 +32,7 @@ const List = props => {
 const styles = {
   list: {
     width: '45vw',
-    minHeight: '20vh'
+    minHeight: '40vh'
   }
 }
 
