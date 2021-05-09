@@ -8,7 +8,7 @@ import Card from '../PPC/Card';
 
 const List = props => {
 
-  const { onClickHandler, message, listData, nominated } = props;
+  const { onClickHandler, message, listData, nominationList } = props;
 
   return (
     <Card>
@@ -20,7 +20,7 @@ const List = props => {
               key={listData.Title}
               title={listData.Title}
               year={listData.Year}
-              nominationList={nominated}
+              nominationList={nominationList}
               onClickHandler={onClickHandler}
             />
             : <h3>{message}</h3>

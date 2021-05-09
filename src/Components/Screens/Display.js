@@ -14,15 +14,10 @@ const Display = props => {
   const [searchedValue, setSearchedValue] = useState('');
   const [nominated, setNominated] = useState([]);
 
-  //
-  useEffect(() => {
-    setSearchBarValue('')
-  }, [searchedValue])
-
   const Banner = () => {
     return (
       <Card>
-        <h3>You have reached the maximum amount of nominations!</h3>
+        <h3>You can make {5 - nominated.length} more nominations.</h3>
       </Card>
     )
   };
@@ -37,7 +32,7 @@ const Display = props => {
       <div style={styles.dualBoxWrapper}>
         <List
           listData={searchedValue}
-          nominated={nominated}
+          nominationList={nominated}
           onClickHandler={setNominated}
           message={'Use the search feature to find titles and nominate titles.'}
         />
@@ -46,7 +41,7 @@ const Display = props => {
           onClickHandler={setNominated}
         />
       </div>
-      {nominated.length === 5 && Banner()}
+      {nominated.length > 0 && Banner()}
     </>
   );
 }
