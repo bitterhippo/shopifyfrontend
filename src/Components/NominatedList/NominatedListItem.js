@@ -6,8 +6,9 @@ const NominatedListItem = ({ title, year, onClickDeleteHandler}) => {
     <div style={styles.item}> 
       <h3>{title} ({year})</h3>
       <button
+      style={styles.button}
        onClick={() => onClickDeleteHandler(title)}
-      >Delete Me</button>
+      >Remove</button>
     </div>
   )
 };
@@ -20,6 +21,11 @@ const styles = {
     marginBottom: 5,
     borderRadius: 5,
     border: '1px solid black'
+  },
+  button: {
+    color: 'white',
+    fontWeight: 'bold',
+    backgroundColor: 'red'
   }
 }
 

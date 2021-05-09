@@ -12,7 +12,8 @@ const SearchBar = ({ onChangeHandler, buttonValue, buttonHandler }) => {
         <input
           style={styles.input}
           onChange={(e) => {
-            onChangeHandler(e.target.value)
+            e.preventDefault();
+            onChangeHandler(e.target.value);
           }}
         />
         <button

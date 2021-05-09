@@ -5,8 +5,10 @@ const ListItem = ({ title, year, onClickHandler }) => {
   return (
     <div style={styles.listItem}>
       <h3>{title} ({year})</h3>
-      <button onClick={() => onClickHandler(prevState => 
-        [...prevState, { Title: title, Year: year }]
+      <button
+        style={styles.button}
+        onClick={() => onClickHandler(prevState =>
+          [...prevState, { Title: title, Year: year }]
         )}>
         Nominate</button>
     </div>
@@ -23,5 +25,10 @@ const styles = {
     marginBottom: 5,
     borderRadius: 5,
     border: '1px solid black',
+  },
+  button: {
+    color: 'white',
+    fontWeight: 'bold',
+    backgroundColor: 'green'
   }
 }

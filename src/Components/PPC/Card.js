@@ -14,7 +14,7 @@ const styles = {
   card: {
     backgroundColor: '#eeeeee',
     borderRadius: 5,
-    border: '1px solid black',
+    border: '2px solid black',
     textAlign: 'center'
   }
 }
