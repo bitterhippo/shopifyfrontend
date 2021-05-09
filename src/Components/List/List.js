@@ -17,7 +17,7 @@ const List = props => {
             year={listData.Year}
             onClickHandler={onClickHandler}
           />
-          : `${message}`
+          : <h3>{message}</h3>
       }
     </div>
   )

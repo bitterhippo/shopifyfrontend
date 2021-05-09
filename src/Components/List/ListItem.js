@@ -5,8 +5,9 @@ const ListItem = ({ title, year, onClickHandler }) => {
   return (
     <div style={styles.listItem}>
       <h1>{title} ({year})</h1>
-      <button onClick={() => onClickHandler(currentState =>
-        [...currentState, { Title: title, Year: year }])}>
+      <button onClick={() => onClickHandler(prevState => 
+        [...prevState, { Title: title, Year: year }]
+        )}>
         Nominate</button>
     </div>
   )

@@ -12,8 +12,8 @@ export default Card;
 
 const styles = {
   card: {
-    backgroundColor: 'grey',
+    backgroundColor: '#eeeeee',
     borderRadius: 5,
-    justifySelf: 'center'
+    border: '1px solid black'
   }
 }

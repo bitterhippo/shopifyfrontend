@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 //Components
 import List from '../List/List';
 import SearchBar from '../SearchBar/SearchBar';
+import NominatedList from '../NominatedList/NominatedList';
 //PPCS
 import Card from '../PPC/Card';
 //API
-import API from '../../API/API';
 
 const Display = props => {
 
@@ -15,27 +15,31 @@ const Display = props => {
   const [searchedValue, setSearchedValue] = useState('');
   const [nominated, setNominated] = useState([]);
 
+  console.log(nominated)
+
+  //
+  useEffect(() => {
+    setSearchBarValue('')
+  }, [searchedValue])
+
   return (
-    <Card>
+    <>
       <SearchBar
         onChangeHandler={setSearchBarValue}
+        buttonValue={searchBarValue}
+        buttonHandler={setSearchedValue}
       />
-      <button
-        style={styles.button}
-        onClick={() => API.GetOneByTitle(searchBarValue, setSearchedValue)}
-      >Search</button>
       <div style={styles.dualBoxWrapper}>
         <List
           listData={searchedValue}
           onClickHandler={setNominated}
-          message={'Use the search feature to find titles.'}
+          message={'Use the search feature to find titles and nominate titles.'}
         />
-        <List
-          listData={''}
-          message={`You haven't nominated any movies yet.`}
+        <NominatedList
+          listData={nominated}
         />
       </div>
-    </Card>
+    </>
   );
 }
 
