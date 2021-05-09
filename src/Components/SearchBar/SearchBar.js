@@ -10,6 +10,8 @@ const SearchBar = ({ onChangeHandler, buttonValue, buttonHandler }) => {
       <h3> Enter the name of title you would like to nominate.</h3>
       <div style={styles.wrapper}>
         <input
+          value={buttonValue}
+          placeholder="Search for films"
           style={styles.input}
           onChange={(e) => {
             e.preventDefault();
@@ -17,11 +19,10 @@ const SearchBar = ({ onChangeHandler, buttonValue, buttonHandler }) => {
           }}
         />
         <button
-          placeholder="film name EX: Braveheart"
-          value={buttonValue}
           style={styles.button}
           onClick={() => {
             API.GetOneByTitle(buttonValue, buttonHandler);
+            onChangeHandler('');
           }}
         >Search</button>
       </div>

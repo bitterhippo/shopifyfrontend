@@ -15,6 +15,7 @@ const styles = {
     backgroundColor: '#eeeeee',
     borderRadius: 5,
     border: '2px solid black',
-    textAlign: 'center'
+    textAlign: 'center',
+    marginBottom: 25
   }
 }
