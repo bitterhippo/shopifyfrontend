@@ -5,16 +5,17 @@ import ListItem from './ListItem';
 
 const List = props => {
 
-  const { handler, message } = props;
+  const { onClickHandler, message, listData } = props;
 
   return (
     <div style={styles.list}>
       {
-        props.listData.length > 0
+        props.listData !== ''
           ? <ListItem
-            title={props.listData.Title}
-            year={props.listData.Year}
-            onClickHandler={handler}
+            key={listData.Title}
+            title={listData.Title}
+            year={listData.Year}
+            onClickHandler={onClickHandler}
           />
           : `${message}`
       }

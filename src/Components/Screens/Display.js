@@ -11,11 +11,9 @@ import API from '../../API/API';
 const Display = props => {
 
   //State Managment 
-  const [searchBarValue, setSearchBarValue] = useState([]);
+  const [searchBarValue, setSearchBarValue] = useState('');
   const [searchedValue, setSearchedValue] = useState('');
   const [nominated, setNominated] = useState([]);
-
-  console.log(nominated)
 
   return (
     <Card>
@@ -32,9 +30,9 @@ const Display = props => {
           onClickHandler={setNominated}
           message={'Use the search feature to find titles.'}
         />
-        <List 
-          listData={nominated}
-          message={`You haven't nominated any films yet.`}
+        <List
+          listData={''}
+          message={`You haven't nominated any movies yet.`}
         />
       </div>
     </Card>
