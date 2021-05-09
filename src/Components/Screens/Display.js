@@ -37,6 +37,7 @@ const Display = props => {
       <div style={styles.dualBoxWrapper}>
         <List
           listData={searchedValue}
+          nominated={nominated}
           onClickHandler={setNominated}
           message={'Use the search feature to find titles and nominate titles.'}
         />
