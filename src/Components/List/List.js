@@ -4,18 +4,26 @@ import React from 'react';
 import ListItem from './ListItem';
 
 const List = ({ searchData }) => {
+
   return (
-    <React.Fragment>
+    <div style={styles.list}>
       {
-        searchData !== '' 
-        ? <ListItem 
-          title={searchData.Title}
-          date={searchData.Year}
-        />
-        : 'no data to list'
+        searchData !== ''
+          ? <ListItem
+            title={searchData.Title}
+            date={searchData.Year}
+          />
+          : 'no data to list'
       }
-    </React.Fragment>
+    </div>
   )
 };
 
+const styles = {
+  list: {
+    minWidth: '50%'
+  }
+}
+
 export default List;
+

@@ -14,8 +14,7 @@ const Display = props => {
   const [searchBarValue, setSearchBarValue] = useState('');
   const [searchedValue, setSearchedValue] = useState('');
 
-  console.log(searchBarValue);
-  console.log(searchedValue);
+  console.log(searchedValue)
 
   return (
     <Card>
@@ -23,8 +22,9 @@ const Display = props => {
         onChangeHandler={setSearchBarValue}
       />
       <button
+        style={styles.button}
         onClick={() => API.GetOneByTitle(searchBarValue, setSearchedValue)}
-      />
+      >Search</button>
       <div style={styles.dualBoxWrapper}>
         <List
           searchData={searchedValue}
@@ -44,6 +44,8 @@ const styles = {
   dualBoxWrapper: {
     display: 'flex',
     flexDirection: 'row',
-    width: '50%'
+    marginTop: 15
+  },
+  button: {
   }
 }

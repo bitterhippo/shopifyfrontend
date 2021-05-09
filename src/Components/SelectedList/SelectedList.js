@@ -2,10 +2,17 @@ import React from 'react';
 
 const SelectedList = props => {
   return (
-    <React.Fragment>
+    <div style={styles.box}>
       Wow this should be working
-    </React.Fragment>
+    </div>
   )
 };
+
+const styles = {
+  box: {
+    minWidth: '50%',
+    backgroundColor: 'red'
+  }
+}
 
 export default SelectedList;

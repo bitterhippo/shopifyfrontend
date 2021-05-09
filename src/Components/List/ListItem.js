@@ -1,12 +1,19 @@
 import React from 'react';
 
-const ListItem = ({ Title, Year }) => {
+const ListItem = ({ title, year }) => {
+
   return (
-    <>
-      <h1>{Title}</h1>
-      <h1>{Year}</h1>
-    </>
+    <div style={styles.listItem}>
+      <h1>{title}</h1>
+      <h1>{year}</h1>
+    </div>
   )
 };
 
 export default ListItem;
+
+const styles = {
+  listItem: {
+    backgroundColor: 'green'
+  }
+}
