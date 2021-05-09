@@ -4,9 +4,6 @@ import React, { useState, useEffect } from 'react';
 import List from '../List/List';
 import SearchBar from '../SearchBar/SearchBar';
 import NominatedList from '../NominatedList/NominatedList';
-//PPCS
-import Card from '../PPC/Card';
-//API
 
 const Display = props => {
 
@@ -37,6 +34,7 @@ const Display = props => {
         />
         <NominatedList
           listData={nominated}
+          onClickHandler={setNominated}
         />
       </div>
     </>

@@ -4,7 +4,7 @@ import NominatedListItem from './NominatedListItem';
 //PPC
 import Card from '../PPC/Card';
 
-const NominatedList = ({ listData }) => {
+const NominatedList = ({ listData, onClickHandler }) => {
 
   return (
     <Card>
