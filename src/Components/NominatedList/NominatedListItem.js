@@ -1,10 +1,13 @@
 import React from 'react';
 
-const NominatedListItem = ({ title, year}) => {
+const NominatedListItem = ({ title, year, onClickDeleteHandler}) => {
+
   return (
     <div style={styles.item}> 
       <h3>{title} ({year})</h3>
-      <button>Delete Me</button>
+      <button
+       onClick={() => onClickDeleteHandler(title)}
+      >Delete Me</button>
     </div>
   )
 };

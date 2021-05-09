@@ -6,6 +6,13 @@ import Card from '../PPC/Card';
 
 const NominatedList = ({ listData, onClickHandler }) => {
 
+  const DeleteOne = targetValue => {
+    
+    let arrayFilter = listData.filter(currentFilm => currentFilm.Title !== targetValue);
+
+    onClickHandler(arrayFilter)
+  }
+
   return (
     <Card>
       <div style={styles.list}>
@@ -15,6 +22,7 @@ const NominatedList = ({ listData, onClickHandler }) => {
               key={key}
               title={currentFilm.Title}
               year={currentFilm.Year}
+              onClickDeleteHandler={DeleteOne}
             />)
           : <h3> You haven't nominated any movies yet!</h3>
         }

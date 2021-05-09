@@ -12,8 +12,6 @@ const Display = props => {
   const [searchedValue, setSearchedValue] = useState('');
   const [nominated, setNominated] = useState([]);
 
-  console.log(nominated)
-
   //
   useEffect(() => {
     setSearchBarValue('')

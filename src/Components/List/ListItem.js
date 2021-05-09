@@ -4,7 +4,7 @@ const ListItem = ({ title, year, onClickHandler }) => {
 
   return (
     <div style={styles.listItem}>
-      <h1>{title} ({year})</h1>
+      <h3>{title} ({year})</h3>
       <button onClick={() => onClickHandler(prevState => 
         [...prevState, { Title: title, Year: year }]
         )}>
@@ -17,8 +17,11 @@ export default ListItem;
 
 const styles = {
   listItem: {
-    backgroundColor: 'green',
-    display: 'flex',
-    flexDirection: 'row'
+    width: '100%',
+    justifyContent: 'space-between',
+    display: 'inline-flex',
+    marginBottom: 5,
+    borderRadius: 5,
+    border: '1px solid black',
   }
 }
