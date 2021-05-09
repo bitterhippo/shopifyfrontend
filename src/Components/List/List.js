@@ -5,20 +5,18 @@ import ListItem from './ListItem';
 
 const List = props => {
 
-  console.log(props)
-
-  const { title, year, onNomination } = props.searchData;
+  const { handler, message } = props;
 
   return (
     <div style={styles.list}>
       {
-        props.searchData !== ''
+        props.listData.length > 0
           ? <ListItem
-            title={props.searchData.Title}
-            year={props.searchData.Year}
-            nominationHandler={onNomination}
+            title={props.listData.Title}
+            year={props.listData.Year}
+            onClickHandler={handler}
           />
-          : 'Use the search feature to find titles.'
+          : `${message}`
       }
     </div>
   )

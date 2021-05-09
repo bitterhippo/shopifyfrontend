@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 //Components
 import List from '../List/List';
 import SearchBar from '../SearchBar/SearchBar';
-import SelectedBar from '../SelectedList/SelectedList';
 //PPCS
 import Card from '../PPC/Card';
 //API
@@ -12,11 +11,11 @@ import API from '../../API/API';
 const Display = props => {
 
   //State Managment 
-  const [searchBarValue, setSearchBarValue] = useState('');
+  const [searchBarValue, setSearchBarValue] = useState([]);
   const [searchedValue, setSearchedValue] = useState('');
   const [nominated, setNominated] = useState([]);
 
-  console.log(searchedValue)
+  console.log(nominated)
 
   return (
     <Card>
@@ -29,10 +28,14 @@ const Display = props => {
       >Search</button>
       <div style={styles.dualBoxWrapper}>
         <List
-          searchData={searchedValue}
-          onNomination={setNominated}
+          listData={searchedValue}
+          onClickHandler={setNominated}
+          message={'Use the search feature to find titles.'}
         />
-        <SelectedBar />
+        <List 
+          listData={nominated}
+          message={`You haven't nominated any films yet.`}
+        />
       </div>
     </Card>
   );

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ListItem = ({ title, year, nominationHandler }) => {
+const ListItem = ({ title, year, onClickHandler }) => {
 
   return (
     <div style={styles.listItem}>
       <h1>{title} ({year})</h1>
-      <button onClick={nominationHandler({ filmName: title, filmYear: year })}>
+      <button onClick={() => onClickHandler({ Title: title, Year: year })}>
         Nominate</button>
     </div>
   )
